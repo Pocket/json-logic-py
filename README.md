@@ -104,15 +104,8 @@ jsonLogic(False, i_wasnt_even_supposed_to_be_here);
 ```
 
 ## Installation
+** DO NOT USE `pip install json-logic` **
+The version on pip is serverely out of date, and does not work with Python 3.x .
 
-The best way to install this library is via [PIP](https://pypi.python.org/pypi/):
-
-```bash
-pip install json-logic
-```
-
-If that doesn't suit you, and you want to manage updates yourself, the entire library is self-contained in `json_logic.py` and you can download it straight into your project as you see fit.
-
-```bash
-curl -O https://raw.githubusercontent.com/nadirizr/json-logic-py/master/json_logic.py
-```
+Instead, use: 
+`curl https://raw.githubusercontent.com/Pocket/json-logic-py/master/json_logic/__init__.py > json_logic.py`
