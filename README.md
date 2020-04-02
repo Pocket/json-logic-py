@@ -104,7 +104,7 @@ jsonLogic(False, i_wasnt_even_supposed_to_be_here);
 ```
 
 ## Installation
-** DO NOT USE `pip install json-logic` **
+**DO NOT USE `pip install json-logic`**
 The version on pip is serverely out of date, and does not work with Python 3.x .
 
 Instead, use: 
