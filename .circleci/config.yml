@@ -1,0 +1,28 @@
+version: 2
+jobs:
+
+  build:
+    working_directory: ~/json-logic-py
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+      - run:
+          command: |
+            pip install -r requirements.txt
+            pytest pfm_feat/test --cov=. --cov-config=.coveragerc --junitxml=test-reports/junit.xml
+            coverage html --rcfile=.coveragerc
+      - store_test_results:
+          path: test-reports
+
+      - store_artifacts:
+          path: json-logic-py-coverage
+
+      - run:
+          command: |
+            python setup.py sdist
+            version=`python .circleci/uprev.py`
+            curl -F package=@dist/pocket-json-logic-py-$version.tar.gz https://$FURY_PUSH_AUTH@push.fury.io/pocket/
+
