@@ -12,13 +12,6 @@ jobs:
       - run:
           command: |
             pip install -r requirements.txt
-            pytest pfm_feat/test --cov=. --cov-config=.coveragerc --junitxml=test-reports/junit.xml
-            coverage html --rcfile=.coveragerc
-      - store_test_results:
-          path: test-reports
-
-      - store_artifacts:
-          path: json-logic-py-coverage
 
       - run:
           command: |
