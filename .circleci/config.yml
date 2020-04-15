@@ -17,5 +17,5 @@ jobs:
           command: |
             python setup.py sdist
             version=`python .circleci/uprev.py`
-            curl -F package=@dist/pocket-json-logic-py-$version.tar.gz https://$FURY_PUSH_AUTH@push.fury.io/pocket/
+            curl --verbose -F package=@dist/pocket-json-logic-py-$version.tar.gz https://$FURY_PUSH_AUTH@push.fury.io/pocket/
 
