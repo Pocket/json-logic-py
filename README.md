@@ -28,7 +28,7 @@ This is a simple test, equivalent to `1 == 1`.  A few things about the format:
   1. Each value can be a string, number, boolean, array (non-associative), or null
 
 ### Compound
-Here we're beginning to nest rules. 
+Here we're beginning to nest rules.
 
 ```python
 jsonLogic(
@@ -39,13 +39,13 @@ jsonLogic(
 )
 # True
 ```
-  
+
 In an infix language (like Python) this could be written as:
 
 ```python
 ( (3 > 1) and (1 < 3) )
 ```
-    
+
 ### Data-Driven
 
 Obviously these rules aren't very interesting if they can only take static literal data. Typically `jsonLogic` will be called with a rule object and a data object. You can use the `var` operator to get attributes of the data object:
@@ -110,7 +110,7 @@ jsonLogic(False, i_wasnt_even_supposed_to_be_here);
 The best way to install this library is via [PIP](https://pypi.python.org/pypi/):
 
 ```bash
-pip install json-logic
+pip install pocket-json-logic
 ```
 
 If that doesn't suit you, and you want to manage updates yourself, the entire library is self-contained in `json_logic.py` and you can download it straight into your project as you see fit.
