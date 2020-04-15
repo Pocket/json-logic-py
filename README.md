@@ -111,3 +111,5 @@ jsonLogic(False, i_wasnt_even_supposed_to_be_here);
 The version on pip is serverely out of date, and does not work with Python 3.x .
 Instead, use: 
 `curl https://raw.githubusercontent.com/Pocket/json-logic-py/master/json_logic/__init__.py > json_logic.py`
+
+Thanks
